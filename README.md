@@ -20,7 +20,7 @@ python3 lookup.py input_file.txt
 Working:
 
 	- The program then establishes a connection with the VirusTotal API endpoint for retrieving IP address lookups.
-	 - Sets up the necessary headers and specifies the format for accepting JSON response data.
-	 - Depending on whether the IP address is deemed malicious or not, the program writes the IP address, country, and status (malicious or undetected) to the CSV file.
-	 - If an error occurs during the request, the program writes an error message to the CSV file.
-	- Throughout the IP address processing, the program utilizes the `tqdm` library to display a progress bar indicating the progress of the scan.
+	- Sets up the necessary headers and specifies the format for accepting JSON response data.
+	- Depending on whether the IP address is deemed malicious or not, the program writes the IP address, country, and status (malicious or undetected) to the CSV file.
+ 	- If an error occurs during the request, the program writes an error message to the CSV file.
+  	- Throughout the IP address processing, the program utilizes the `tqdm` library to display a progress bar indicating the progress of the scan.
