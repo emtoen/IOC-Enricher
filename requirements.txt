@@ -1,6 +1,2 @@
-warnings
 requests
-json
-csv
-argparse
 tqdm
