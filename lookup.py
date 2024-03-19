@@ -47,12 +47,18 @@ with open(csv_filename, "w", newline="") as file:
                 data = response.json()
                 verdict = (data["data"]["attributes"]["last_analysis_stats"]["malicious"])
                 if verdict > 0:
-                    country = (data["data"]["attributes"]["country"])
                     status =  "Malicious"
+                    try:
+                        country = data["data"]["attributes"]["country"]
+                    except KeyError:
+                        country = 'NA'
                     writer.writerow([ip_address, country, status])
                 else:
-                    country = (data["data"]["attributes"]["country"])
                     status =  "Undetected"
+                    try:
+                        country = data["data"]["attributes"]["country"]
+                    except KeyError:
+                        country = 'N.A'
                     writer.writerow([ip_address, country, status])
             else:
                 writer.writerow([ip_address, "", "", f"Error occurred: {response.status_code}"])
